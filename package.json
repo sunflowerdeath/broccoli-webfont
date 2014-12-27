@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Broccoli plugin that generates webfonts from SVG icons.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunflowerdeath/broccoli-webfont"
+  },
   "scripts": {
     "test": "mocha tests"
   },

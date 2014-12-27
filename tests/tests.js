@@ -3,7 +3,7 @@ var path = require('path')
 var fs = require('fs')
 var broccoli = require('broccoli')
 
-var Webfont = require('..')
+var webfont = require('..')
 
 describe('broccoli-webfont', function() {
 	var DIR = path.join(__dirname, 'src')
@@ -14,7 +14,7 @@ describe('broccoli-webfont', function() {
 	})
 
 	it('creates webfonts from svg icons', function() {
-		var tree = Webfont(DIR)
+		var tree = webfont(DIR)
 		builder = new broccoli.Builder(tree)
 		return builder.build().then(function(result) {
 			var files = fs.readdirSync(result.directory)
@@ -24,7 +24,7 @@ describe('broccoli-webfont', function() {
 	})
 
 	it('uses glob patterns', function() {
-		var tree = Webfont(DIR, {
+		var tree = webfont(DIR, {
 			files: ['close.svg']
 		})
 		builder = new broccoli.Builder(tree)
@@ -40,7 +40,7 @@ describe('broccoli-webfont', function() {
 		var CSS_DEST = 'cssdest/css.css'
 		var HTML_DEST = 'htmldest/html.html'
 
-		var tree = Webfont(DIR, {
+		var tree = webfont(DIR, {
 			dest: DEST,
 			cssDest: CSS_DEST,
 			htmlDest: HTML_DEST,
