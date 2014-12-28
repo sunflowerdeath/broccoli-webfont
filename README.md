@@ -16,11 +16,11 @@ npm install broccoli-webfont
 var webfont = require('broccoli-webfont')
 
 var tree = webfont('inputTree', {
-	//paths or globs
-	files: [
-		'icon.svg',
-		'close.svg'
-	]
+  //paths or globs
+  files: [
+    'icon.svg',
+    'close.svg'
+  ]
 })
 ```
 
@@ -36,7 +36,7 @@ Options are the same as in the
 [webfonts-generator](https://github.com/sunflowerdeath/webfonts-generator#list-of-options),
 with the following differences:
 
-* `files`, `dest`, `cssDest`, and `htmlDest` are relative to inputTree
+* `files`, `dest`, `cssDest` and `htmlDest` are relative paths
 * `files` supports glob patterns
 * `files` default value is `['**/*.svg']`
 * `dest` default value is `'.'`
