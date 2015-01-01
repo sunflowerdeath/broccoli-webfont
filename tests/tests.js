@@ -59,4 +59,7 @@ describe('broccoli-webfont', function() {
 		})
 	})
 
+
+	//TODO test caching
+
 })
