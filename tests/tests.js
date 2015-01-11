@@ -23,6 +23,15 @@ describe('broccoli-webfont', function() {
 		})
 	})
 
+	it('do nothing when no files found', function() {
+		var tree = webfont(DIR, {files: ['nofile']})
+		builder = new broccoli.Builder(tree)
+		return builder.build().then(function(result) {
+			var files = fs.readdirSync(result.directory)
+			assert.deepEqual(files, [])
+		})
+	})
+
 	it('uses glob patterns', function() {
 		var tree = webfont(DIR, {
 			files: ['close.svg']

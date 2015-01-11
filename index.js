@@ -15,15 +15,18 @@ Webfont.prototype = Object.create(CachingWriter.prototype)
 
 /** Generates webfonts in the 'destDir'. */
 Webfont.prototype.updateCache = function(srcDir, destDir, files) {
-	var _this = this
+	if (!files.length) return
+
 	var webfontsOptions = _.extend({}, this.options)
 	_.each(['dest', 'cssDest', 'htmlDest'], function(option) {
-		var value = _this.options[option]
+		var value = this.options[option]
 		if (value !== undefined) webfontsOptions[option] = path.join(destDir, value)
+	}, this)
+	webfontsOptions.files = _.map(files, function(file) {
+	 return path.join(srcDir, file)
 	})
-	var absFiles = _.map(files, function(file) { return path.join(srcDir, file) })
-	webfontsOptions.files = absFiles
 	if (webfontsOptions.dest === undefined) webfontsOptions.dest = destDir
+
 	return Q.nfcall(webfontsGenerator, webfontsOptions)
 }
 
