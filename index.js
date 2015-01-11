@@ -13,14 +13,16 @@ function Webfont(inputTree, options) {
 
 Webfont.prototype = Object.create(CachingWriter.prototype)
 
-//Generates webfonts in the destDir
+/** Generates webfonts in the 'destDir'. */
 Webfont.prototype.updateCache = function(srcDir, destDir, files) {
 	var _this = this
-	var webfontsOptions = _.extend({}, this.options, {files: files})
+	var webfontsOptions = _.extend({}, this.options)
 	_.each(['dest', 'cssDest', 'htmlDest'], function(option) {
 		var value = _this.options[option]
 		if (value !== undefined) webfontsOptions[option] = path.join(destDir, value)
 	})
+	var absFiles = _.map(files, function(file) { return path.join(srcDir, file) })
+	webfontsOptions.files = absFiles
 	if (webfontsOptions.dest === undefined) webfontsOptions.dest = destDir
 	return Q.nfcall(webfontsGenerator, webfontsOptions)
 }

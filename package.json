@@ -1,6 +1,6 @@
 {
   "name": "broccoli-webfont",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Broccoli plugin that generates webfonts from SVG icons.",
   "main": "index.js",
   "repository": {
@@ -16,7 +16,7 @@
   "author": "sunflowerdeath",
   "license": "public domain",
   "dependencies": {
-    "broccoli-glob-caching-writer": "^0.1.0",
+    "broccoli-glob-caching-writer": "^0.2.0",
     "q": "^1.1.2",
     "underscore": "^1.7.0",
     "webfonts-generator": "^0.1.1"
