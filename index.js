@@ -30,4 +30,6 @@ Webfont.prototype.updateCache = function(srcDir, destDir, files) {
 	return Q.nfcall(webfontsGenerator, webfontsOptions)
 }
 
+Webfont.templates = webfontsGenerator.templates
+
 module.exports = Webfont

@@ -40,6 +40,7 @@ with the following differences:
 * `files` supports glob patterns
 * `files` default value is `['**/*.svg']`
 * `dest` default value is `'.'`
+* paths of default templates are in the `webfonts.templates` object.
 
 ##License
 
