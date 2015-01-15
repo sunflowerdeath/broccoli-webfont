@@ -1,6 +1,6 @@
 {
   "name": "broccoli-webfont",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Broccoli plugin that generates webfonts from SVG icons.",
   "main": "index.js",
   "repository": {
@@ -19,7 +19,7 @@
     "broccoli-glob-caching-writer": "^0.2.0",
     "q": "^1.1.2",
     "underscore": "^1.7.0",
-    "webfonts-generator": "^0.1.1"
+    "webfonts-generator": "^0.2.0"
   },
   "devDependencies": {
     "broccoli": "^0.13.3"
