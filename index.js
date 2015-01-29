@@ -12,6 +12,7 @@ function Webfont(inputTree, options) {
 }
 
 Webfont.prototype = Object.create(CachingWriter.prototype)
+Webfont.prototype.description = 'Webfont'
 
 /** Generates webfonts in the 'destDir'. */
 Webfont.prototype.updateCache = function(srcDir, destDir, files) {

@@ -1,16 +1,16 @@
-#broccoli-webfont
+# broccoli-webfont
 
 Broccoli plugin that generates webfonts from SVG icons.
 
 It is wrapper around [webfonts-generator](https://github.com/sunflowerdeath/webfonts-generator).
 
-##Install
+## Install
 
 ```
 npm install broccoli-webfont
 ```
 
-##Usage
+## Usage
 
 ```
 var webfont = require('broccoli-webfont')
@@ -24,13 +24,13 @@ var tree = webfont('inputTree', {
 })
 ```
 
-##Webfont(inputTree, options)
+## Webfont(inputTree, options)
 
-###inputTree
+### inputTree
 
 Broccoli tree with SVG files.
 
-###options
+### options
 
 Options are the same as in the
 [webfonts-generator](https://github.com/sunflowerdeath/webfonts-generator#list-of-options),
@@ -42,7 +42,7 @@ with the following differences:
 * `dest` default value is `'.'`
 * paths of default templates are in the `webfonts.templates` object.
 
-##License
+## License
 
 Public domain, see the `LICENCE.md` file.
 
